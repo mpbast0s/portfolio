@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Maria Paula Bastos</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #mouse_scroll {
+            display: none;
+        }
+
+        .mouse_scroll {
+            display: block;
+            margin: 0 auto;
+            width: 24px;
+            height: 100px;
+            margin-top: 20px;
+            animation: slide1 1s ease-in-out infinite;
+
+        }
+
+        @keyframes slide1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(0, 10px) rotate(0deg);
+            }
+        }
+
+
+
+        .m_scroll_arrows {
+            display: block;
+            width: 5px;
+            height: 5px;
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            margin: 0 0 3px 4px;
+
+            width: 16px;
+            height: 16px;
+        }
+
+
+        .unu {
+            margin-top: 1px;
+        }
+
+        .unu,
+        .doi,
+        .trei {
+            -webkit-animation: mouse-scroll 1s infinite;
+            -moz-animation: mouse-scroll 1s infinite;
+            animation: mouse-scroll 1s infinite;
+
+        }
+
+        .unu {
+            -webkit-animation-delay: .1s;
+            -moz-animation-delay: .1s;
+            -webkit-animation-direction: alternate;
+
+            animation-direction: alternate;
+            animation-delay: alternate;
+        }
+
+        .doi {
+            -webkit-animation-delay: .2s;
+            -moz-animation-delay: .2s;
+            -webkit-animation-direction: alternate;
+
+            animation-delay: .2s;
+            animation-direction: alternate;
+
+            margin-top: -6px;
+        }
+
+        .trei {
+            -webkit-animation-delay: .3s;
+            -moz-animation-delay: .3s;
+            -webkit-animation-direction: alternate;
+
+            animation-delay: .3s;
+            animation-direction: alternate;
+
+
+            margin-top: -6px;
+        }
+
+        .mouse {
+            height: 42px;
+            width: 24px;
+            border-radius: 14px;
+            transform: none;
+            border: 2px solid white;
+            top: 170px;
+        }
+
+        .wheel {
+            height: 5px;
+            width: 2px;
+            display: block;
+            margin: 5px auto;
+            background: white;
+            position: relative;
+
+            height: 4px;
+            width: 4px;
+            border: 2px solid #fff;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+        }
+
+        .wheel {
+            -webkit-animation: mouse-wheel 0.6s linear infinite;
+            -moz-animation: mouse-wheel 0.6s linear infinite;
+            animation: mouse-wheel 0.6s linear infinite;
+        }
+
+        @-webkit-keyframes mouse-wheel {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(6px);
+                -ms-transform: translateY(6px);
+                transform: translateY(6px);
+            }
+        }
+
+        @-moz-keyframes mouse-wheel {
+            0% {
+                top: 1px;
+            }
+
+            25% {
+                top: 2px;
+            }
+
+            50% {
+                top: 3px;
+            }
+
+            75% {
+                top: 2px;
+            }
+
+            100% {
+                top: 1px;
+            }
+        }
+
+        @-o-keyframes mouse-wheel {
+
+            0% {
+                top: 1px;
+            }
+
+            25% {
+                top: 2px;
+            }
+
+            50% {
+                top: 3px;
+            }
+
+            75% {
+                top: 2px;
+            }
+
+            100% {
+                top: 1px;
+            }
+        }
+
+        @keyframes mouse-wheel {
+
+            0% {
+                top: 1px;
+            }
+
+            25% {
+                top: 2px;
+            }
+
+            50% {
+                top: 3px;
+            }
+
+            75% {
+                top: 2px;
+            }
+
+            100% {
+                top: 1px;
+            }
+        }
+
+        @-webkit-keyframes mouse-scroll {
+
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes mouse-scroll {
+
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes mouse-scroll {
+
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes mouse-scroll {
+
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        body {
+            
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #3a3d98 0%, #605c3c 50%, #d64d4d 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .content {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-screen {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .title-screen h1 {
+            font-size: 3em;
+        }
+
+        .frame-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 80vh; /* Faz com que a altura mínima da seção seja a altura da viewport */
+
+
+        }
+
+        .frame-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(14, 12, 12, 0.1);
+            width: 80%;
+            height: 60vh;
+            padding-bottom: 28.125%; /* 16:9 aspect ratio */
+            transform: skew(1deg);
+            top: 5vh;
+
+        }
+
+        .frame-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .frame-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 2;
+            transform-origin: 0 0;
+            filter: blur(1px);
+            transform: scale(0.5);
+            width: 200%;
+            height: 200%;
+            
+        }
+
+        .visit-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #3a3d988c 0%, #605c3c93 50%, #d64d4db2 100%);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.2s;
+            
+
+            font-size: xx-large;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 500;
+            font-size: 5.5vw;
+            
+
+        }
+
+        .visit-button:hover {
+            opacity: 1;
+            backdrop-filter: blur(4px);
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            height: 100%;
+            /* Faz com que o conteúdo de texto ocupe a altura total da seção */
+        }
+
+        .text-content h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .text-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        @keyframes goRight {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes goLeft {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        
+
+        .revealedBox {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .revealedBox span {
+            position: absolute;
+            display: block;
+            background: #eee;
+        }
+
+        .revealedBox-in {
+            .contentBox {
+                opacity: 1;
+                transition-delay: 1.05s;
+            }
+        }
+
+        .goRight span {
+            animation: goRight 1.4s;
+        }
+
+        .goLeft span {
+            animation: goLeft 1.4s;
+        }
+
+        .goTop span {
+            animation: goTop 1.4s;
+        }
+
+        .goBottom span {
+            animation: goBottom 1.4s;
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+        }
+
+        .title-word {
+            animation: color-animation 4s linear infinite;
+            font-weight: bold;
+            font-family: 'Roboto Mono', monospace;
+
+        }
+
+        .title-word-1 {
+            --color-1: #FFD700;
+            /* Amarelo Ouro */
+            --color-2: #cfa011;
+            /* Amarelo Âmbar */
+            --color-3: #fcf297;
+            /* Amarelo Claro */
+        }
+
+        .title-word-2 {
+            --color-1: #fab54e;
+            /* Amarelo Ouro */
+            --color-2: #cfbc11;
+            /* Amarelo Âmbar */
+            --color-3: #e6fc97;
+            /* Amarelo Claro */
+        }
+
+        .title-word-3 {
+            --color-1: #FFD700;
+            /* Amarelo Ouro */
+            --color-2: #FFC107;
+            /* Amarelo Âmbar */
+            --color-3: #FFEB3B;
+            /* Amarelo Claro */
+        }
+
+        .title-word-4 {
+            --color-1: #FFD700;
+            /* Amarelo Ouro */
+            --color-2: #FFC107;
+            /* Amarelo Âmbar */
+            --color-3: #FFEB3B;
+            /* Amarelo Claro */
+        }
+
+        .title-word-5 {
+            --color-1: #FFD700;
+            /* Amarelo Ouro */
+            --color-2: #FFC107;
+            /* Amarelo Âmbar */
+            --color-3: #FFEB3B;
+            /* Amarelo Claro */
+        }
+
+
+        @keyframes color-animation {
+            0% {
+                color: var(--color-1)
+            }
+
+            32% {
+                color: var(--color-1)
+            }
+
+            33% {
+                color: var(--color-2)
+            }
+
+            65% {
+                color: var(--color-2)
+            }
+
+            66% {
+                color: var(--color-3)
+            }
+
+            99% {
+                color: var(--color-3)
+            }
+
+            100% {
+                color: var(--color-1)
+            }
+        }
+
+        .container {
+            display: grid;
+            /*place-items: center;*/
+            text-align: left;
+            height: 100vh;
+        }
+
+        .container_flecha {
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 8.5vw;
+            text-transform: uppercase;
+            color: #333;
+            /* Cor principal do título */
+        }
+
+        .name {
+            font-size: 0.5em;
+            margin-top: 10px;
+        }
+
+        .flecha {
+            font-size: 20em;
+            color: #333;
+            /* Cor da flecha */
+            margin-top: 10px;
+        }
+
+        .text {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 100;
+            font-size: 50px;
+            color: #FAFAFA;
+        }
+
+        .dup {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 100;
+            font-size: 60px;
+
+        }
+
+        .dud {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 100;
+            color: #bbb;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="title-screen">
+            <div class="container">
+                <div class="text title-word title-word-1"></div>
+                <div id="mouse_scroll" class="mouse_scroll">
+
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="m_scroll_arrows unu"></span>
+                        <span class="m_scroll_arrows doi"></span>
+                        <span class="m_scroll_arrows trei"></span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Reutilizando o frame estilizado do primeiro código 
+        
+        <div class="frame-section scroll-animation revealedBox goLeft" data-title="Frame 4"
+            data-description="Descrição do Frame 4">
+            <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/vida/trabalho4/atividade4.html"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/vida/trabalho4/atividade4.html', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 4</h2>
+                <p>Descrição do Frame 4</p>
+            </div>
+            <span></span> <span></span>
+        </div>-->
+        <div class="frame-section scroll-animation revealedBox goRight" data-title="Certificados Seatel 2024"
+            data-description="Site realizado para organizar e simplificar a distribuição dos certificados da Semana de Atualização de Eng. Elétrica 2024 - UFPR, projeto dentro do PET, a geração de certificados foi automática feita em python">
+            <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/SEATEL2024/"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/SEATEL2024/', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 1</h2>
+                <p>Descrição do Frame 1</p>
+            </div>
+            <span></span> <span></span>
+        </div>
+
+        <!-- Repetir o mesmo padrão para outros frames -->
+        <div class="frame-section scroll-animation revealedBox goLeft" data-title="Página Pessoal"
+        data-description="Para treinar HTML e JavaScript, e compilar informações da miha vida, fiz uma página pessoal">
+        <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/vida"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/vida', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 2</h2>
+                <p>Descrição do Frame 2</p>
+            </div>
+            <span></span> <span></span>
+        </div>
+
+        <div class="frame-section scroll-animation revealedBox goRight" data-title="Processador de Retas e Polígonos"
+            data-description="Projeto de aula para treinar javascript, mais especificamente, a tag 'canvas'. Como nunca utilizei essa tag antes, demonstra persistência e vontade de aprender.">
+            <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/vida/trabalho3/atividade3.html"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/vida/trabalho3/atividade3.html', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 3</h2>
+                <p>Descrição do Frame 3</p>
+            </div>
+            <span></span> <span></span>
+        </div>
+        <!--
+        <div class="frame-section scroll-animation revealedBox goLeft" data-title="Frame 4"
+            data-description="Descrição do Frame 4">
+            <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/vida/trabalho4/atividade4.html"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/vida/trabalho4/atividade4.html', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 4</h2>
+                <p>Descrição do Frame 4</p>
+            </div>
+            <span></span> <span></span>
+        </div>-->
+        <div class="frame-section scroll-animation revealedBox goRight" data-title="Projeto Final do Ensino Médio Técnico"
+            data-description="O projeto foi a prototipagem de uma estufa inteligente que utiliza mineração de dados para otimizar o uso da água, garantir iluminação e nutrientes adequados, promovendo sustentabilidade e eficiência no cultivo.">
+            <div class="frame-container">
+                <iframe src="https://www.cmaker.com.br/como-a-mineracao-de-dados-pode-ajudar-o-meio-ambiente/"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://www.cmaker.com.br/como-a-mineracao-de-dados-pode-ajudar-o-meio-ambiente/', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Projeto Final do Ensino Médio Técnico</h2>
+                <p>Projeto Final do Ensino Médio Técnico</p>
+            </div>
+            <span></span> <span></span>
+        </div>
+        
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.frame-section');
+        const options = {
+            threshold: 0.5
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible', 'revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    const title = section.getAttribute('data-title');
+                    const description = section.getAttribute('data-description');
+                    section.querySelector('h2').textContent = title;
+                    section.querySelector('p').textContent = description;
+                }
+            });
+        });
+
+        class TextScramble {
+            constructor(el) {
+                this.el = el
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'
+                this.update = this.update.bind(this)
+            }
+            setText(newText) {
+                const oldText = this.el.innerText
+                const length = Math.max(oldText.length, newText.length)
+                const promise = new Promise((resolve) => this.resolve = resolve)
+                this.queue = []
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || ''
+                    const to = newText[i] || ''
+                    const start = Math.floor(Math.random() * 40)
+                    const end = start + Math.floor(Math.random() * 40)
+                    this.queue.push({ from, to, start, end })
+                }
+                cancelAnimationFrame(this.frameRequest)
+                this.frame = 0
+                this.update()
+                return promise
+            }
+            update() {
+                let output = ''
+                let complete = 0
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i]
+                    if (this.frame >= end) {
+                        complete++
+                        output += to
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar()
+                            this.queue[i].char = char
+                        }
+                        output += `<span class="dud">${char}</span>`
+                    } else {
+                        output += from
+                    }
+                }
+                this.el.innerHTML = output
+                if (complete === this.queue.length) {
+                    this.resolve()
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update)
+                    this.frame++
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
+        }
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+            'Portfólio',
+            'de projetos',
+            'por Maria Paula Bastos',
+            '<span class="dup title-word title-word-3">PORTIFÓLIO</span><br><span class="dup title-word title-word-2"> de  projetos </span><br><i> por Maria Paula Bastos </i>'
+        ]
+
+        const el = document.querySelector('.text')
+        const mouse = document.getElementById("mouse_scroll")
+        //this.mouse.style.display = 'block';
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+            if (counter < phrases.length) {
+                fx.setText(phrases[counter]).then(() => {
+                    setTimeout(next, 100)
+                })
+                counter++;
+            } else {
+
+                document.getElementById("mouse_scroll").style.display = 'block';
+            }
+        }
+        next()
+    </script>
+
+</body>
+
+</html>
