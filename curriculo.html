@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Paula Bastos - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .toggle-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <button class="toggle-button" onclick="toggleLanguage()">Switch to Portuguese</button>
+
+    <div id="english" style="display: block;">
+        <h1>Maria Paula Bastos - Portfolio</h1>
+        <p><strong>Electrical Engineering Student - UFPR</strong></p>
+        <p><strong>+55 (41) 99169-3433</strong></p>
+        <p><strong><a href="mailto:mapabastos@gmail.com">mapabastos@gmail.com</a></strong></p>
+        <p><strong><a href="https://github.com/mpbast0s">github.com/mpbast0s</a></strong></p>
+        <p><strong><a href="https://mpbast0s.github.io/portfolio/">portfolio</a></strong></p>
+        <h2>Experience</h2>
+        <h3>Front-end Developer - UFPR Technology Department</h3>
+        <p>05/2023 - 05/2024</p>
+        <ul>
+            <li>Developed an application for the technology department, facilitating communication of news to students.</li>
+            <li>Collaborated with a team of developers and designers to plan and implement app features.</li>
+        </ul>
+        <p><strong>Tech Stack:</strong> React Js (Framework: Quasar/Vue), GitHub, TypeScript</p>
+    </div>
+
+    <div id="portuguese" style="display: none;">
+        <h1>Maria Paula Bastos - Portfólio</h1>
+        <p><strong>Estudante de Engenharia Elétrica - UFPR</strong></p>
+        <p><strong>+55 (41) 99169-3433</strong></p>
+        <p><strong><a href="mailto:mapabastos@gmail.com">mapabastos@gmail.com</a></strong></p>
+        <p><strong><a href="https://github.com/mpbast0s">github.com/mpbast0s</a></strong></p>
+        <p><strong><a href="https://mpbast0s.github.io/portfolio/">portfólio</a></strong></p>
+        <h2>Experiência</h2>
+        <h3>Desenvolvedora Front-end - Departamento de Tecnologia da UFPR</h3>
+        <p>05/2023 - 05/2024</p>
+        <ul>
+            <li>Desenvolveu um aplicativo para o departamento de tecnologia, facilitando a comunicação de notícias para os estudantes.</li>
+            <li>Colaborou com uma equipe de desenvolvedores e designers para planejar e implementar funcionalidades do aplicativo.</li>
+        </ul>
+        <p><strong>Tecnologias Utilizadas:</strong> React Js (Framework: Quasar/Vue), GitHub, TypeScript</p>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        const englishContent = document.getElementById('english');
+        const portugueseContent = document.getElementById('portuguese');
+        const button = document.querySelector('.toggle-button');
+
+        if (englishContent.style.display === 'block') {
+            englishContent.style.display = 'none';
+            portugueseContent.style.display = 'block';
+            button.textContent = 'Switch to English';
+        } else {
+            englishContent.style.display = 'block';
+            portugueseContent.style.display = 'none';
+            button.textContent = 'Switch to Portuguese';
+        }
+    }
+</script>
+
+</body>
+</html>
