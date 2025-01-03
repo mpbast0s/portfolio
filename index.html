@@ -33,7 +33,7 @@
 
             </div>
         </div>
-        <div id="contentoo"></div>
+        
        <!--<iframe src="curriculo.html" style="width:100%; height:500px; border:none;"></iframe>--> 
 
         <!-- Reutilizando o frame estilizado do primeiro código 
@@ -51,6 +51,19 @@
             </div>
             <span></span> <span></span>
         </div>-->
+        <div class="frame-section scroll-animation revealedBox goLeft" data-title="Estudos a respeito VHDL"
+            data-description="Uma série de trabalhos exemplo utilizando como base VHDL e a FPGA Nexys 2">
+            <div class="frame-container">
+                <iframe src="https://mpbast0s.github.io/SEATEL2024/"></iframe>
+                <button class="visit-button"
+                    onclick="window.open('https://mpbast0s.github.io/https://github.com/mpbast0s/Estudos-utilizando-VHDL/blob/main/trabalho%20final/imagens/IMG_20241203_101500130_HDR.jpg/', '_blank')">Visitar</button>
+            </div>
+            <div class="text-content">
+                <h2>Frame 1</h2>
+                <p>Descrição do Frame 1</p>
+            </div>
+            <span></span> <span></span>
+        </div>
         <div class="frame-section scroll-animation revealedBox goRight" data-title="Certificados Seatel 2024"
             data-description="Site realizado para organizar e simplificar a distribuição dos certificados da Semana de Atualização de Eng. Elétrica 2024 - UFPR, projeto dentro do PET, a geração de certificados foi automática feita em python">
             <div class="frame-container">
@@ -120,17 +133,22 @@
             </div>
             <span></span> <span></span>
         </div>
+
+        
         
     </div>
 
+    <div id="contentoo"></div>
+
     <script>
+        /*
         fetch('curriculo.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('contentoo').innerHTML = data;
             })
             .catch(error => console.error('Error:', error));
-            
+        */  
         const sections = document.querySelectorAll('.frame-section');
         const options = {
             threshold: 0.5
