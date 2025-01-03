@@ -2,8 +2,10 @@
 
 **Electrical Engineering Student - UFPR**  
 **+55 (41) 99169-3433**  
-**[mapabastos@gmail.com](mailto:mapabastos@gmail.com)**  
+**[mapabastos@gmail.com](mailto:mapabastos@gmail.com)**
+
 **[github.com/mpbast0s](https://github.com/mpbast0s)**
+
 **[portfolio](https://mpbast0s.github.io/portfolio/)**
 
 ---
